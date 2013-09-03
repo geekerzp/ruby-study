@@ -1,0 +1,202 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+A	reflection反射.rb	/^class A < Object    # => class A < Object $/;"	c
+A	reflection反射.rb	/^module A; end               # Empty module $/;"	m
+B	reflection反射.rb	/^module B; include A; end    # Module B includes A$/;"	m
+BankAccount	thread线程.rb	/^class BankAccount$/;"	c
+Base64	Module模块.rb	/^module Base64$/;"	m
+C	reflection反射.rb	/^  class C$/;"	c	class:Greeter.M
+C	reflection反射.rb	/^class C; include B; end     # Class C includes module B$/;"	c
+ClassTrace	meta_program元编程.rb	/^module ClassTrace$/;"	m
+Decoder	Module模块.rb	/^  class Decoder$/;"	c	class:Base64
+Enclosing	const_name_resolution常量名解析.rb	/^module Enclosing $/;"	m
+Encoder	Module模块.rb	/^  class Encoder$/;"	c	class:Base64
+Enumerable	thread线程.rb	/^module Enumerable             # Open the Enumerable module$/;"	m
+Enumerable	thread线程.rb	/^module Enumerable$/;"	m
+Exchanger	thread线程.rb	/^class Exchanger$/;"	c
+File	block代码块.rb	/^class File$/;"	c
+Final	reflection反射.rb	/^module Final                  # A class that includes Final can't be subclassed $/;"	m	class:A
+Functional	函数式编程.rb	/^module Functional$/;"	m
+Greeter	reflection反射.rb	/^module Greeter; def hi; "hello"; end; end     # A silly module $/;"	m
+HTMLForm	DSL特定领域语言.rb	/^class HTMLForm < XMLGrammar$/;"	c
+Hash	reflection反射.rb	/^class Hash$/;"	c
+Included	const_name_resolution常量名解析.rb	/^module Included$/;"	m
+Iterable	Module模块.rb	/^module Iterable   # Classes that define next can include this module$/;"	m
+Iterable	外部迭代器.rb	/^module Iterable$/;"	m
+Kernel	const_name_resolution常量名解析.rb	/^module Kernel$/;"	m
+Local	const_name_resolution常量名解析.rb	/^  class Local < Super $/;"	c	class:Enclosing
+M	reflection反射.rb	/^module M$/;"	m	class:Greeter
+Method	函数式编程.rb	/^class Method; include Functional; end $/;"	c
+Module	meta_program元编程.rb	/^class Module $/;"	c
+Module	meta_program元编程.rb	/^class Module$/;"	c
+MyError	异常处理.rb	/^class MyError < StandardError; end$/;"	c
+Numeric	time时间对象.rb	/^class Numeric$/;"	c
+Object	meta_program元编程.rb	/^class Object $/;"	c
+Object	reflection反射.rb	/^class Object        # Open Object to add a new method$/;"	c	class:Greeter
+Point	class_definition类定义.rb	/^class Point$/;"	c
+Point	class_instance_variable类实例变量.rb	/^class Point$/;"	c
+Point	class_singleton_method类单例方法.rb	/^class Point$/;"	c
+Point	class_variable类变量.rb	/^class Point$/;"	c
+Point	factory_method工厂方法.rb	/^class Point$/;"	c
+Point	marshal_dump和marshal_load.rb	/^class Point                 # A point in n-space$/;"	c
+Point	public_protected_private方法可见性.rb	/^class Point$/;"	c
+Point	reflection反射.rb	/^class Point $/;"	c	class:Greeter
+Point3D	inherit继承.rb	/^class Point3D < Point $/;"	c
+PointStats	singleton_mode单例模式.rb	/^class PointStats$/;"	c
+Proc	函数式编程.rb	/^class Proc; include Functional; end$/;"	c
+Strict	reflection反射.rb	/^module Strict $/;"	m	class:A
+Super	const_name_resolution常量名解析.rb	/^class Super$/;"	c
+Symbol	函数式编程.rb	/^class Symbol$/;"	c
+SynchronizedObject	meta_program元编程.rb	/^class SynchronizedObject < BasicObject$/;"	c
+Test	reflection反射.rb	/^class Test          # A simple class with an instance variable $/;"	c	class:Greeter
+TracedObject	meta_program元编程.rb	/^class TracedObject$/;"	c
+Unicode	meta_program元编程.rb	/^module Unicode$/;"	m
+Widget	public_protected_private方法可见性.rb	/^class Widget $/;"	c
+XML	DSL特定领域语言.rb	/^class XML$/;"	c
+XMLGrammar	DSL特定领域语言.rb	/^class XMLGrammar$/;"	c
+[]	函数式编程.rb	/^  def [](obj)$/;"	f	class:Symbol
+[]=	函数式编程.rb	/^  def []=(o,f)$/;"	f	class:Symbol
+__delegate	meta_program元编程.rb	/^  def __delegate$/;"	f	class:TracedObject
+__delegate	meta_program元编程.rb	/^  def __delegate; @delegate; end $/;"	f	class:SynchronizedObject
+accessor_pair	closure闭包.rb	/^def accessor_pair(initialValue=nil)$/;"	f
+add_class_method	reflection反射.rb	/^def add_class_method(c, m, &b)$/;"	f	class:Greeter
+add_method	reflection反射.rb	/^def add_method(c, m, &b)$/;"	f	class:Greeter
+allowed_attributes	DSL特定领域语言.rb	/^  def self.allowed_attributes$/;"	F
+apply	函数式编程.rb	/^  def apply(enum)$/;"	f	class:Functional
+apply_head	函数式编程.rb	/^  def apply_head(*first)$/;"	f	class:Functional
+apply_tail	函数式编程.rb	/^  def apply_tail(*last)$/;"	f	class:Functional
+attributes	meta_program元编程.rb	/^  def attributes(hash)$/;"	f	class:Module
+backup	reflection反射.rb	/^def backup(c, m, prefix="original")$/;"	f
+bindings	reflection反射.rb	/^  def bindings      # Note plural on this method$/;"	f	class:Greeter.Object
+cartesian	factory_method工厂方法.rb	/^  def Point.cartesian(x,y)  # Factory method for Cartesian coordinates$/;"	F	class:Point
+class_attrs	meta_program元编程.rb	/^  def class_attrs(hash)$/;"	f	class:Module
+comment	DSL特定领域语言.rb	/^  def comment(text)$/;"	f
+comment	DSL特定领域语言.rb	/^  def comment(text)$/;"	f	class:XML
+compose	Proc对象.rb	/^def compose(f,g)                                # Compose 2 lambdas$/;"	f
+compose	函数式编程.rb	/^  def compose(f)$/;"	f	class:Functional
+coneach	thread线程.rb	/^  def coneach$/;"	f	class:Enumerable
+conject	thread线程.rb	/^  def conject(initial, mapper, injector)$/;"	f	class:Enumerable
+conmap	thread线程.rb	/^  def conmap(&block)          # Define a new method that excepts a block$/;"	f	class:Enumerable
+conread	thread线程.rb	/^def conread(filenames)$/;"	f
+const_missing	meta_program元编程.rb	/^  def self.const_missing(name)    # Undefined constant passed as a symbol$/;"	F	class:Unicode
+const_missing	reflection反射.rb	/^def Symbol.const_missing(name)$/;"	F	class:Greeter
+content	DSL特定领域语言.rb	/^  def content(text)$/;"	f
+content	DSL特定领域语言.rb	/^  def content(text)$/;"	f	class:XML
+create_alias	meta_program元编程.rb	/^  def create_alias(original, prefix="alias")$/;"	f	class:Module
+days	time时间对象.rb	/^  def days; hours*24; end $/;"	f	class:Numeric
+decode	Module模块.rb	/^    def decode $/;"	f	class:Base64.Decoder
+defuse	异常处理.rb	/^def defuse$/;"	f
+each	Module模块.rb	/^  def each                    # And define each on top of next $/;"	f	class:Iterable
+each	Module模块.rb	/^def countdown.each            # The each iterator as a singleton method $/;"	F
+each	外部迭代器.rb	/^  def each$/;"	f	class:Iterable
+element	DSL特定领域语言.rb	/^  def self.element(tagname, attributes={})$/;"	F	class:XMLGrammar
+empty	reflection反射.rb	/^  def empty$/;"	f	class:Greeter
+encode	Module模块.rb	/^    def encode $/;"	f	class:Base64.Encoder
+exchange	thread线程.rb	/^  def exchange(value)$/;"	f	class:Exchanger
+explode	异常处理.rb	/^def explode                           # This method raises a RuntimeError 10% of the time$/;"	f
+factorial	异常处理.rb	/^def factorial(n)                                                          # Define a factorial method with argument n$/;"	f
+fibonacci_generator	fiber纤程.rb	/^def fibonacci_generator(x0,y0)                # Base the sequence on x0, y0$/;"	f
+find	next语句.rb	/^def find(array, target)$/;"	f
+five	代码块block.rb	/^def five; yield 1,2,3,4,5; end 								# Yield 5 values$/;"	f
+generate	DSL特定领域语言.rb	/^  def self.generate(out, &block)$/;"	F	class:XML
+generate	DSL特定领域语言.rb	/^  def self.generate(out, &block)$/;"	F	class:XMLGrammar
+handle_client	thread线程.rb	/^def handle_client(c)$/;"	f
+hello	method方法.rb	/^def hello                                 # A nice simple method$/;"	f
+hello	method方法.rb	/^def hello                                 # Now we define a new method with the old name$/;"	f
+helper	Module模块.rb	/^  def Base64.helper$/;"	F	class:Base64
+hours	time时间对象.rb	/^  def hours; minutes*60; end $/;"	f	class:Numeric
+included	reflection反射.rb	/^    def self.included(c)      # When included in c$/;"	F	class:A.Final
+inherited	meta_program元编程.rb	/^def Object.inherited(c)$/;"	F
+inherited	reflection反射.rb	/^        def inherited(sub)    # To detect subclass$/;"	f	class:A.Final.included
+inherited	reflection反射.rb	/^def Object.inherited(c)$/;"	F
+init	thread线程.rb	/^  def init(name, checking, savings)$/;"	f	class:BankAccount
+initialize	DSL特定领域语言.rb	/^  def initialize(out)$/;"	f	class:XML
+initialize	DSL特定领域语言.rb	/^  def initialize(out)$/;"	f	class:XMLGrammar
+initialize	class_definition类定义.rb	/^  def initialize(x,y)$/;"	f	class:Point
+initialize	class_instance_variable类实例变量.rb	/^  def initialize(x,y)           # Initialize method$/;"	f	class:Point
+initialize	class_variable类变量.rb	/^  def initialize(x,y)         # Initialize method$/;"	f	class:Point
+initialize	factory_method工厂方法.rb	/^  def initialize(x,y)       # Expects Cartesian coordinates$/;"	f	class:Point
+initialize	inherit继承.rb	/^  def initialize(x,y,z)$/;"	f	class:Point3D
+initialize	marshal_dump和marshal_load.rb	/^  def initialize(*coords)   # Accept an arbitrary # of coordinates$/;"	f	class:Point
+initialize	meta_program元编程.rb	/^  def initialize(o); @delegate = o; end $/;"	f	class:SynchronizedObject
+initialize	meta_program元编程.rb	/^  def initialize(o, name, stream)$/;"	f	class:TracedObject
+initialize	reflection反射.rb	/^  def initialize(x); @x = x; end$/;"	f	class:Greeter.Test
+initialize	reflection反射.rb	/^  def initialize(x, y); @x, @y = x, y; end    # Define instance variables$/;"	f	class:Greeter.Point
+initialize	singleton_mode单例模式.rb	/^  def initialize$/;"	f	class:PointStats
+initialize	thread线程.rb	/^  def initialize$/;"	f	class:Exchanger
+iterable	外部迭代器.rb	/^def iterable(iterator)$/;"	f
+iterator	Proc对象.rb	/^def iterator(&proc)$/;"	f
+join_all	thread线程.rb	/^def join_all$/;"	f
+lambdaBuilder	Proc对象.rb	/^def lambdaBuilder(message)                        # Create and return a lambda$/;"	f
+len	reflection反射.rb	/^  def len$/;"	f	class:Greeter
+load	meta_program元编程.rb	/^def load(*args)$/;"	f
+makeproc	Proc对象.rb	/^def makeproc(&p)        # Convert associated block to a Proc and store in p$/;"	f
+marshal_dump	marshal_dump和marshal_load.rb	/^  def marshal_dump          # Pack coords into a atring and marshal that $/;"	f	class:Point
+marshal_load	marshal_dump和marshal_load.rb	/^  def marshal_load(s)         # Unpack coords from unmarshaled string $/;"	f	class:Point
+max	method方法.rb	/^def max(first, *rest)$/;"	f
+max	method方法.rb	/^def max(first, *rest, &block)$/;"	f
+memoize	函数式编程.rb	/^  def memoize$/;"	f	class:Functional
+method_added	reflection反射.rb	/^def String.method_added(name)$/;"	F	class:A
+method_missing	meta_program元编程.rb	/^  def method_missing(*args, &block)$/;"	f	class:SynchronizedObject
+method_missing	meta_program元编程.rb	/^  def method_missing(*args, &block)$/;"	f	class:TracedObject
+method_missing	reflection反射.rb	/^  def method_missing(key, *args)$/;"	f	class:Hash
+milliseconds	time时间对象.rb	/^  def milliseconds; seconds\/1000.0; end $/;"	f	class:Numeric
+minutes	time时间对象.rb	/^  def minutes; seconds*60; end $/;"	f	class:Numeric
+multiplier	closure闭包.rb	/^def multiplier(n)$/;"	f
+multipliers	closure闭包.rb	/^def multipliers(*args)$/;"	f
+mutex	meta_program元编程.rb	/^  def mutex $/;"	f	class:Object
+n_times	block代码块.rb	/^def n_times(thing)$/;"	f
+new	class_instance_variable类实例变量.rb	/^  def self.new(x,y)             # Class method to create new Point objects$/;"	F	class:Point
+open_and_process	block代码块.rb	/^  def File.open_and_process(*args)$/;"	F	class:File
+polar	factory_method工厂方法.rb	/^  def Point.polar(r,theta)  # Factory method for polar coordinates$/;"	F	class:Point
+printme	singleton_method单键方法.rb	/^def o.printme           # Define a singletion method for this object$/;"	F
+procBuilder	Proc对象.rb	/^def procBuilder(message)                          # Create and return a proc$/;"	f
+readlines	thread线程.rb	/^def readlines(filenames)$/;"	f
+readonly	meta_program元编程.rb	/^  def readonly(*syms)$/;"	f	class:Module
+readwrite	meta_program元编程.rb	/^  def readwrite(*syms)$/;"	f	class:Module
+record	singleton_mode单例模式.rb	/^  def record(point)   # 记录点的状态$/;"	f	class:PointStats
+reduce	函数式编程.rb	/^  def reduce(enum)$/;"	f	class:Functional
+report	class_instance_variable类实例变量.rb	/^  def self.report$/;"	F	class:Point
+report	class_variable类变量.rb	/^  def self.report$/;"	F	class:Point
+report	singleton_mode单例模式.rb	/^  def report          # 输出点的状态$/;"	f	class:PointStats
+report	thread线程.rb	/^  def report$/;"	f	class:BankAccount
+require	meta_program元编程.rb	/^def require(file)$/;"	f
+risky	异常处理.rb	/^def risky$/;"	f
+seconds	time时间对象.rb	/^  def seconds; self; end $/;"	f	class:Numeric
+sequence	method方法.rb	/^def sequence(args)$/;"	f
+sequence2	method方法.rb	/^def sequence2(n, m, c)$/;"	f
+sequence3	method方法.rb	/^def sequence3(n, m, c, &block)          # Explicit argument to get block as a Proc$/;"	f
+sequence4	method方法.rb	/^def sequence4(n, m, c, b)$/;"	f
+sequence5	method方法.rb	/^def sequence5(args, &b)                       # Pass arguments as a hash and follow with a block$/;"	f
+single	reflection反射.rb	/^def o.single; 1; end      # Define a singleton method$/;"	F	class:Greeter
+singleton_method_added	reflection反射.rb	/^  def singleton_method_added(name)$/;"	f	class:A.Strict
+singleton_method_added	reflection反射.rb	/^def String.singleton_method_added(name)$/;"	F	class:A
+square	method对象.rb	/^def square(x); x*x; end$/;"	f
+sum	class_singleton_method类单例方法.rb	/^  def Point.sum(*points)$/;"	F	class:Point
+sum	class_singleton_method类单例方法.rb	/^  def self.sum(*points)$/;"	F	class:Point
+sum	class_singleton_method类单例方法.rb	/^  def sum(*points)$/;"	f
+synchronize_method	meta_program元编程.rb	/^  def synchronize_method(m)$/;"	f	class:Module
+synchronized	meta_program元编程.rb	/^def synchronized(*args)$/;"	f
+tag	DSL特定领域语言.rb	/^  def tag(tagname, attributes={})$/;"	f
+tag	DSL特定领域语言.rb	/^  def tag(tagname, attributes={})$/;"	f	class:XML
+test	Proc对象.rb	/^def test $/;"	f
+test	Proc对象.rb	/^def test$/;"	f
+to_days	time时间对象.rb	/^  def to_days; to_hours\/24; end $/;"	f	class:Numeric
+to_hours	time时间对象.rb	/^  def to_hours; to_minutes\/60; end $/;"	f	class:Numeric
+to_milliseconds	time时间对象.rb	/^  def to_milliseconds; to_seconds*1000; end $/;"	f	class:Numeric
+to_minutes	time时间对象.rb	/^  def to_minutes; to_seconds\/60; end $/;"	f	class:Numeric
+to_s	class_definition类定义.rb	/^  def to_s$/;"	f	class:Point
+to_seconds	time时间对象.rb	/^  def to_seconds; self; end $/;"	f	class:Numeric
+to_weeks	time时间对象.rb	/^  def to_weeks; to_days\/7; end $/;"	f	class:Numeric
+trace	meta_program元编程.rb	/^  def trace(name="", stream=STDERR)$/;"	f	class:Object
+trace!	meta_program元编程.rb	/^  def trace!(*methods)$/;"	f	class:Object
+transfer_from_savings	thread线程.rb	/^  def transfer_from_savings(x)$/;"	f	class:BankAccount
+twice	enumerator枚举器.rb	/^def twice$/;"	f
+untrace!	meta_program元编程.rb	/^  def untrace!(*methods)$/;"	f
+utility_method	public_protected_private方法可见性.rb	/^  def utility_method        # Define a method $/;"	f	class:Widget
+weeks	time时间对象.rb	/^  def weeks; days*7; end $/;"	f	class:Numeric
+x	public_protected_private方法可见性.rb	/^  def x                     # Accessor method for @x$/;"	f	class:Widget
