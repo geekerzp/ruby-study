@@ -6,6 +6,8 @@
 full = '/home/geekerzp/bin/ruby.exe'
 file = File.basename(full)    # => 'ruby.exe'
 File.basename(full, '.exe')   # => 'ruby'
+# 获取文件目录
+# ~~~~~~~~~~~~
 dir = File.dirname(full)      # => '/home/geekerzp/bin'
 File.split(full)              # => ["/home/geekerzp/bin", "ruby.exe"]
 File.extname(full)            # => '.exe'
