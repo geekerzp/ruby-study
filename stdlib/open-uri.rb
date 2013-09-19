@@ -67,3 +67,27 @@
         print res.body
       }
     }
+
+# https-双向验证
+# ~~~~~~~~~~~~~~
+
+    require 'net/http'
+    require 'net/https'
+    require 'openssl'
+    require 'uri'
+
+    ContentURI = URI.parse("https://palladium.wejn.cz/sslcerttest/")
+    @cert_raw = File.read('client.pem')
+    @cert_key_raw = @cert_raw
+    TestDataPath = '.'
+
+    req = Net::HTTP::Get.new(ContentURI.path)
+    https = Net::HTTP.new(ContentURI.host, ContentURI.port)
+    https.use_ssl = true
+    https.cert = OpenSSL::X509::Certificate.new(@cert_raw)
+    https.key = OpenSSL::PKey::RSA.new(@cert_key_raw)
+    https.verify_mode = OpenSSL::SSL::VERIFY_PEER
+    https.ca_file = File.join(TestDataPath, 'cacert.pem')
+    resp = https.start { |cx| cx.request(req) }
+    p resp
+    p resp.body
