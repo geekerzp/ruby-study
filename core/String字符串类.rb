@@ -97,10 +97,15 @@ s.include? ?H
 "this is it".split
 "hello".split('l')
 "1, 2 ,3".split(/\s*,\s*/)
+
 # 字符串中查找特定串
+# ~~~~~~~~~~~~~~~~~~
 "banana".partition("an")
 "banana".rpartition("an")
 "a123b".partition(/\d+/)
+
+"banana"[/an/]    # => "an"
+"a123b"[/\d+/]    # => "123"
 
 s.sub("l","L")
 s.gsub("l","L")
