@@ -56,6 +56,7 @@ t.monday?         # => false
 
 # Formatting Times and Dates 
 t.to_s            
+t.to_i, t.to_f    # => 获取时间戳timestamp
 t.ctime
 
 # strftime interpolates date and time components into a template string. 
