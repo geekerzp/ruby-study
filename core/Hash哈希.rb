@@ -1,24 +1,25 @@
+# -*- coding: utf-8 -*-
 # 
 # ==========
 # |  Hash  |
 # ==========
 # ------------------------------------------------------------------------------
 # =================
-# |  哈希类的特点 |
+# |  哈希类的特点   |
 # =================
 # 优点：可以使用任何对象作为索引
 # 缺点：它的元素是无序的，很难使用哈希实现栈和队列
 # ------------------------------------------------------------------------------
 # ================
-# |  创建哈希表  |
+# |  创建哈希表    |
 # ================
-#
-{ :one => 1, :two => 2 }  # Basic hash literal syntax 
-{ :one, 1, :two, 2 }      # Same, with deprecated Ruby 1.8 syntax
-{ one: 1, two: 2 }        # Same, Ruby 1.9 syntax. Keys are symbols 
-{}                        # A new, empty, Hash object 
-Hash.new                  # => {}: creates empty hash 
-Hash[:one, 1, :two, 2]    # => {one:1, two:2}
+
+{ :one => 1, :two => 2 }                    # Basic hash literal syntax 
+{ one: 1, two: 2 }                          # Same, Ruby 1.9 syntax. Keys are symbols 
+{}                                          # A new, empty, Hash object 
+Hash.new                                    # => {}: creates empty hash 
+Hash[:one, 1, :two, 2]                      # => {one:1, two:2}
+Hash[[[1, 'a'], [2, 'b'], [3, 'c']]]        # => {1=>'a', 2=>'b', 3=>'c'}
 
 # 当哈希表字面量作为方法调用的最后一个参数时，
 # 可以省略大括号。

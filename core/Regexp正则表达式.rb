@@ -58,9 +58,9 @@ Regexp.union("()", "[]", "{}")    # => /\(\)\[\]\{\}/
 /[^aeiou]/
 /[^0-9]/
 
-# 特殊字符 special character 
+# 特殊字符 special character
 /./
-/./m 
+/./m
 /\d/
 /\D/
 /\s/
@@ -80,7 +80,7 @@ Regexp.union("()", "[]", "{}")    # => /\(\)\[\]\{\}/
 /<.*>/    # greedy repetition 贪婪匹配
 /<.*?>/   # nongreedy repetition 非贪婪匹配
 
-# 团体化 grouping 
+# 团体化 grouping
 /\D\d+/
 /(\D\d)+/
 
@@ -88,10 +88,10 @@ Regexp.union("()", "[]", "{}")    # => /\(\)\[\]\{\}/
 /([Rr]uby&\1ails)/
 /(['"])[^\1]*\1/    # single or double-quoted string
                     # \1 matches whatever the 1st group matched.
-                    # \2 matches whatever the 2st group matched. 
+                    # \2 matches whatever the 2st group matched.
 # 命名后向引用 named group backreferences
 /(?<first>\w)(?<second>\w)\k<second>\k<first>/
-/(?'first'\w)(?'second'\w)\k'second'\k'first'/    # alternate syntax 
+/(?'first'\w)(?'second'\w)\k'second'\k'first'/    # alternate syntax
 
 # 选择 alternatives
 /ruby|rube/
@@ -99,8 +99,8 @@ Regexp.union("()", "[]", "{}")    # => /\(\)\[\]\{\}/
 /ruby(!+|\?)/
 
 # 锚点 anchors
-/^ruby/   # start of a string or line 
-/ruby$/   # end of a string or line 
+/^ruby/   # start of a string or line
+/ruby$/   # end of a string or line
 /\Aruby/  # start of a string
 /ruby\Z/  # end of a string or before if a '\n'
 /ruby\z/  # end of a string
@@ -109,12 +109,12 @@ Regexp.union("()", "[]", "{}")    # => /\(\)\[\]\{\}/
 /Ruby(?=!)/ # match 'Ruby', if followed by an exclamation point
 /Ruby(?!!)/ # match 'Ruby', if not...
 /(?<=!)Ruby/  # match 'Ruby', if the header an exclamation point
-/(?<!!)Ruby/  # match 'Ruby', if not 
+/(?<!!)Ruby/  # match 'Ruby', if not
 
 # 特殊语法 special syntax with parentheses
-/R(?#comment)/  # match "R". All the rest is a comment 
+/R(?#comment)/  # match "R". All the rest is a comment
 /R(?i)uby/      # case-insensitive while matching "uby"
-/R(?i:uby)/     # same thing 
+/R(?i:uby)/     # same thing
 /rub(()?:y|le)/ # without backreferences
 #
 # 特殊匹配模式
@@ -144,7 +144,7 @@ pattern = /(Ruby|Perl)(\s+)(rocks|sucks)!/
 text = "Ruby\trocks!"
 pattern =~ text
 data = Regexp.last_match    # 获得一个MatchData对象
-data.size 
+data.size
 data[0]
 data[1]
 data[2]
@@ -166,7 +166,7 @@ if (pattern =~ "Ruby 1.9.1 rocks!")
   $~[:ver]
   $~[:review]
   $~.offset(:ver)
-end 
+end
 pattern.names           # => ["lang","ver","review"]
 pattern.named_captures  # => {"lang"=>[1], "ver"=>[2], "review"=>[3]}
 #
@@ -175,7 +175,7 @@ pattern.named_captures  # => {"lang"=>[1], "ver"=>[2], "review"=>[3]}
 # if data = pattern.match(text)
 # 返回一个MatchData
 # pattern.match(text) {|data| handle_match(data)}
-# 将产生的MatchData传入代码块中 
+# 将产生的MatchData传入代码块中
 # ---------------------------------------------------------------------------------------------------------------------------------------------------
 #
 # =============
@@ -194,10 +194,10 @@ pattern.named_captures  # => {"lang"=>[1], "ver"=>[2], "review"=>[3]}
 # -----------------+---------------------+---------------------------------------
 #  $1              |none                 |Regexp.last_match[1]
 # -----------------+---------------------+---------------------------------------
-#  $2, etc         |none                 |Regexp.last_match[2], etc 
+#  $2, etc         |none                 |Regexp.last_match[2], etc
 # -----------------+---------------------+---------------------------------------
 #  $+              |$LAST_PATEN_MATCH    |Regexp.last_match[-1]
-# 
+#
 # 这些变量都是方法局部和线程局部的，
 # 两个线程不会互相干扰，
 # 方法内部不会影响方法调用者。
@@ -225,7 +225,7 @@ s.split             # ["one,","two,","three"]
 s.split(", ")       # ["one","two","three"]
 s.split(/\s*,\s*/)  # ["one","two","three"]
 
-# 4.index 
+# 4.index
 # ~~~~~~~
 text = "hello world"
 pattern = /l/
@@ -253,13 +253,13 @@ lang = /ruby|java|perl|python/i
 text.gsub!(lang) {|l| l.capitalize }
 
 pattern = /(['"])([^\1]*)\1/
-text.gsub!(pattern) do 
+text.gsub!(pattern) do
   if ($1 == '"')
     "'#$2'"
-  else 
+  else
     "\"#$2\""
-  end 
-end 
+  end
+end
 #
 # ---------------------------------------------------------------------------------------------------------------------------------------------------
 #
@@ -268,7 +268,7 @@ end
 # ==========
 #
 # Regexp.encoding方法指定编码:
-# u->utf-8: s->sjis: e->euc-jp: n->none 
+# u->utf-8: s->sjis: e->euc-jp: n->none
 #
 # 在正则表达式中可以显式使用\u指定utf-8编码，
 # 如果不显式指定编码，则使用源程序编码，
