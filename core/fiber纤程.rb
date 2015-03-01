@@ -1,3 +1,4 @@
+# coding: utf-8
 Fiber纤程的原理
 Fiber.new来创建一个纤程，并且给它一个代码块来指定需要执行的代码
 一个纤程的代码体不会立刻被执行，需要调用那个纤程的Fiber对象的resume方法来开始纤程的运行
@@ -45,7 +46,7 @@ puts "Fiber said: #{response2}"
 用Fiber纤程实现生成器Generator
 # Return a Fiber to compute Fibonacci numbers
 def fibonacci_generator(x0,y0)                # Base the sequence on x0, y0
-  Fiber.new do                                 
+  Fiber.new do
     x,y = x0,y0                               # Initialize x and y
     loop do                                   # This Fiber runs forever
       Fiber.yield y                           # Yield the next number in sequence
@@ -79,4 +80,3 @@ puts f.transfer(1)
 
 firber库还定义了alive?的实例方法来检测一个纤程是否还在运行
 current的类方法，用于返回当前掌握控制权限的Fiber对象
-
